@@ -1,0 +1,283 @@
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+
+  font-family: 'Rock 3D', cursive;
+}
+.bg
+{
+  height: 100vh;
+  background-image: url(./images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  border: none;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 10vh 60vh 30vh;
+}
+.hero
+{
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  height: 70%;
+  justify-content: center;
+  align-self:center;
+}
+nav {
+
+  display: flex;
+  color: white;
+  margin: auto;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto; 
+  grid-column: 1/3;
+  grid-row: 1/2;
+  animation: nav 6s infinite linear;
+}
+
+nav img
+{
+  margin-top: 20px;
+  width: 50px;
+  height: 30px;
+}
+.desc
+{
+  position: relative;
+  width: 90%;
+  padding: 20px 40px;
+  color: white;
+  font-family: cursive;
+  top: 25%;
+  left: 10%;
+  text-transform: capitalize;
+  line-height: 1.5;
+  animation: textcolor 5s infinite linear;
+  
+}
+.desc h2
+{
+  font-size: 60px;
+
+}
+ .desc button
+{
+
+  margin-top: 15px;
+  width: 150px;
+  font-size: 10px;
+  padding: 15px 30px;
+  background:transparent;
+  color: aliceblue;
+  border: 1px solid white;
+  border-radius: 30px;
+  animation:  btnmove 3s infinite linear ;
+ 
+}
+
+.hero img{
+  height: 100%;
+ 
+}
+.details
+{
+  color: white;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: center;
+}
+.chef-left
+{
+  transform: translateY(-10%);
+  transition:1.5s;
+}
+.chef-right
+{
+  transform: translateY(10%);
+  transition:1.5s;
+}
+.hero:hover .chef-left
+{
+  cursor: pointer;
+  transform: translateY(0%);
+}
+.hero:hover .chef-right
+{
+  cursor: pointer;
+  transform: translateY(0%);
+}
+
+@keyframes textcolor
+{
+  0%
+  {
+    color: white;
+    transform: translateY(0%);
+  }
+  50%
+  {
+   color: rgb(28, 145, 192);
+   transform: translateY(-5%);
+
+  }
+  100%
+  {
+    color: coral;
+    transform: translateY(0%);
+  }
+
+}
+.parent
+{
+  height: 0vh;
+  display: flex;
+  justify-content: space-around;
+}
+@keyframes balls
+{
+  0%
+  {
+    transform: translateY(0%);
+  }
+  100%
+  {
+   transform: translateY(-900%);
+    opacity: 0; 
+
+  }
+
+
+}
+@keyframes nav
+{
+  0%
+  {
+    transform: translateY(0%);
+  }
+  50%
+  {
+   transform: translateY(15%);
+  }
+  100%
+  {
+   transform: translateY(0);
+  }
+
+
+}
+
+.bol1
+{
+  width: 30px;
+  height: 30px;
+  animation: balls 3s infinite linear;
+}
+.bol2
+{
+  width: 15px;
+  height: 15px;
+  animation: balls 2s infinite linear;
+}
+.bol3
+{
+  width: 20px;
+  height: 20px;
+  animation: balls 6s infinite linear;
+}
+.bol4
+{
+  width: 45px;
+  height: 45px;
+  animation: balls 8s infinite linear;
+}
+.bol5
+{
+  width: 40px;
+  height: 40px;
+  animation: balls 7s infinite linear;
+}
+.bol6
+{
+  width: 25px;
+  height: 25px;
+  animation: balls 3s infinite linear;
+}
+.bol7
+{
+  width: 30px;
+  height: 30px;
+  animation: balls 5s infinite linear;
+}
+.bol8
+{
+  width: 40px;
+  height: 40px;
+  animation: balls 7s infinite linear;
+}
+.bol9
+{
+  width: 12px;
+  height: 12px;
+  animation: balls 4s infinite linear;
+}
+
+@media  screen and (max-width: 750px) {
+  
+  .desc
+{
+  width: 100%;
+  padding: 20px 20px;
+
+  
+}
+.desc p 
+{
+font-size: 15px;
+}
+.desc h2
+{
+  font-size: 20px;
+
+
+}
+ .desc button
+{
+  margin-top: 20px;
+  width: 120px;
+  font-size: 10px;
+  padding: 10px 25px;
+  border-radius: 20px;
+ 
+}
+.hero
+{
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  height: 40%;
+  justify-content: center;
+  align-self:center;
+}
+.bg
+{
+ 
+  grid-template-columns: 60vw 40vw;
+  grid-template-rows: 10vh 60vh 30vh;
+}
+.details
+{
+  color: white;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  text-align: center;
+}
+  
+}
